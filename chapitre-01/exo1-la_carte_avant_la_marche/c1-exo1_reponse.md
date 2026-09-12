@@ -8,14 +8,14 @@
 - **Nombre de chaines de compilation :** 5
 - **Nombre de projets par types :**
    - *ConsoleApp* : 98
-      -*sortie:* **PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu> Get-Content jenga_output.txt | Select-String "ConsoleApp" | Measure-Object | Select-Object -ExpandProperty Count
+      - *sortie:* **PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu> Get-Content jenga_output.txt | Select-String "ConsoleApp" | Measure-Object | Select-Object -ExpandProperty Count
 98**
    - *WindowedApp* : 55
-      -*sortie:* **PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu> Get-Content jenga_output.txt | Select-String "WindowedApp" | Measure-Object | Select-Object -ExpandProperty Count
+      - *sortie:* **PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu> Get-Content jenga_output.txt | Select-String "WindowedApp" | Measure-Object | Select-Object -ExpandProperty Count
 55**
    - *StaticLib* : 60
-      -*sortie:* **PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu> Get-Content jenga_output.txt | Select-String "StaticLib" | Measure-Object | Select-Object -ExpandProperty Count
+      - *sortie:* **PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu> Get-Content jenga_output.txt | Select-String "StaticLib" | Measure-Object | Select-Object -ExpandProperty Count
 60**
    - *TestSuite* : 60
-      -*sortie:* **PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu> Get-Content jenga_output.txt | Select-String "TestSuite" | Measure-Object | Select-Object -ExpandProperty Count
+      - *sortie:* **PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu> Get-Content jenga_output.txt | Select-String "TestSuite" | Measure-Object | Select-Object -ExpandProperty Count
 60**
