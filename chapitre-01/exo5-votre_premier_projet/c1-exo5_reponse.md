@@ -122,7 +122,7 @@ NkPdfRenderProbe             ConsoleApp    C++        No     Yes
 NkFileWorkerTest             ConsoleApp    C++        No     Yes
 NKCode                       WindowedApp   C++        No     Yes
 NK3DModeler                  WindowedApp   C++        No     Yes
-MonEssai                     ConsoleApp    C++        No     Yes
+## MonEssai                     ConsoleApp    C++        No     Yes
 NKImGuiIntegration           StaticLib     C++        No     Yes
 NKUIIntegration              StaticLib     C++        No     Yes
 NKGuiIntegration             StaticLib     C++        No     Yes
