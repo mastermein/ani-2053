@@ -7,6 +7,8 @@
 
 **Erreur ajouter :** **ligne 07 : erreur_de_compilation;**
 
+## fichier avec l'erreur de syntaxe :
+
 **Temps mis par la construction pour s'arreter :** **4.08s**
 
 **Les projets ayant quand meme etes construits :** 
@@ -134,5 +136,108 @@ Echecs (1) — a corriger :
   ✗ NKMath
 
 PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu>**
+
+
+## fichier remit en etat :
+
+**Temps de construction :** **2.08s**
+
+**Retour du terminal :** **PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu> jenga build --target NKMath
+
+╔══════════════════════════════════════════════════════════════════╗
+║                                                                  ║
+║                ██╗███████╗███╗   ██╗ ██████╗  █████╗             ║
+║                ██║██╔════╝████╗  ██║██╔════╝ ██╔══██╗            ║
+║                ██║█████╗  ██╔██╗ ██║██║  ███╗███████║            ║
+║           ██   ██║██╔══╝  ██║╚██╗██║██║   ██║██╔══██║            ║
+║           ╚█████╔╝███████╗██║ ╚████║╚██████╔╝██║  ██║            ║
+║            ╚════╝ ╚══════╝╚═╝  ╚═══╝ ╚═════╝ ╚═╝  ╚═╝            ║
+║                                                                  ║
+║             Multi-platform C/C++ Build System v2.8.0             ║
+║                                                                  ║
+╚══════════════════════════════════════════════════════════════════╝
+
+Loading workspace...
+[NKCode] ATTENTION : aucun wheel Jenga trouve (dist/*.whl) -> le paquet n'aura PAS de Jenga embarque, et les boutons Construire/Executer seront inoperants. Produisez-le avec ./cri.sh dans le depot Jenga.
+
+Configuration: Debug
+Target:        Windows x86_64
+Toolchain:     clang-mingw
+
+Build Order (5 projects):
+  1. NKPlatform [STATIC_LIB] →
+  2. NKCore [STATIC_LIB] (depends: NKPlatform) →
+  3. NKMemory [STATIC_LIB] (depends: NKCore, NKPlatform) →
+  4. NKContainers [STATIC_LIB] (depends: NKCore, NKMemory, NKPlatform) →
+  5. NKMath [STATIC_LIB] (depends: NKContainers, NKCore, NKMemory, NKPlatform)
+
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: NKPlatform                                                       Kind: STATIC_LIB  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 7 source file(s)
+✓ All files up to date
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✓ Build Successful                                                             Time: 0.05s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: NKCore                                                           Kind: STATIC_LIB  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 5 source file(s)
+✓ All files up to date
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✓ Build Successful                                                             Time: 0.06s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: NKMemory                                                         Kind: STATIC_LIB  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 14 source file(s)
+✓ All files up to date
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✓ Build Successful                                                             Time: 0.11s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: NKContainers                                                     Kind: STATIC_LIB  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 43 source file(s)
+✓ All files up to date
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✓ Build Successful                                                             Time: 0.44s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+╔══════════════════════════════════════════════════════════════════════════════════════════════╗
+║  Project: NKMath                                                           Kind: STATIC_LIB  ║
+╚══════════════════════════════════════════════════════════════════════════════════════════════╝
+
+ℹ Found 12 source file(s)
+✓   [12/12] Compiled: NkMat.cpp
+ℹ Linking...
+✓ Built: Build\Lib\Debug-Windows\NKMath.lib
+
+┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+│  ✓ Build Successful                                                             Time: 1.36s  │
+└──────────────────────────────────────────────────────────────────────────────────────────────┘
+
+════════════════════════════════════════════════════════════════════════════════
+                                BUILD COMPLETED
+════════════════════════════════════════════════════════════════════════════════
+Projects Built:  5/5
+Time:           2.08s
+Status:         ✓ SUCCESS
+════════════════════════════════════════════════════════════════════════════════
+
+PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu>
+**
 
 
