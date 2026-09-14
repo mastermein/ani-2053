@@ -8,7 +8,7 @@ commande d'ouverture :
 
 ## ce qu'il fait :
 
-   **NkRef ouvre une fenetre noir. cette fenetre est un outil de dessin numerique. a l'etreme droite on peut acceder a la barre d'outils qui donne acces aux outils suivants :**
+   **NkRef ouvre une fenetre noir redimensionnable. cette fenetre est un outil de dessin numerique. a l'etreme droite on peut acceder a la barre d'outils qui donne acces aux outils suivants :**
    * **Changer le theme de la fenetre (clair/sombre)**
    * **afficher ou non la grille**
    * **grader ou pas la fenetre toujours en avant**
