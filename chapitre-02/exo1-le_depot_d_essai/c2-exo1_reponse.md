@@ -59,7 +59,7 @@ PS C:\Users\Mastermein\Desktop\Teuguis\ani-2053\chapitre-02\exo1-le_depot_d_essa
     * **git commit -m "Ajout du troisieme fichier"**
 
   * **retour du terminal :** **PS C:\Users\Mastermein\Desktop\Teuguis\ani-2053\chapitre-02\exo1-le_depot_d_essai> touch f2.txt
-PS C:\Users\Mastermein\Desktop\Teuguis\ani-2053\chapitre-02\exo1-le_depot_d_essai> git add f2.txt
+PS C:\Users\Mastermein\Desktop\Teuguis\ani-2053\chapitre-02\exo1-le_depot_d_essai> git add f3.txt
 PS C:\Users\Mastermein\Desktop\Teuguis\ani-2053\chapitre-02\exo1-le_depot_d_essai> git commit -m "Ajout du deuxieme fichier"
 [master 84c5d67] Ajout du deuxieme fichier
  1 file changed, 0 insertions(+), 0 deletions(-)
