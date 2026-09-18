@@ -6,7 +6,7 @@ int main() {
     
     // Affichage des informations
     std::cout << "Vitesse actuelle du joueur : " << vitesseJoueur << std::endl;
-    std::cout << "Bienvenue dans le jeu !" << std::endl;
+    std::cout << "Bienvenue dans la galaxie !" << std::endl;
 
     return 0;
 }
