@@ -2,7 +2,7 @@
 
 int main() {
     // Configuration de la vitesse
-    float vitesseJoueur = 100.0f;
+    float vitesseJoueur = 250.0f;
     
     // Affichage des informations
     std::cout << "Vitesse actuelle du joueur : " << vitesseJoueur << std::endl;
