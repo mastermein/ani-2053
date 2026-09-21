@@ -1,9 +1,9 @@
 ## Prenez trois commits du dépôt du moteur et jugez leurs messages : dit-il ce qu'il fait ? pourquoi ? porte-t-il un seul sujet ? Récrivez celui qui vous paraît le plus faible.
 
 
-## arborescence utilisee : C:\Users\Mastermein\Desktop\Teuguis\Nkentseu
+## 1-arborescence utilisee : C:\Users\Mastermein\Desktop\Teuguis\Nkentseu
 
-## commande utilisee : git log --online
+## 2-commande utilisee : git log --online
 
   * **Retour du terminal :**
     * **PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu> git log --oneline
@@ -64,25 +64,44 @@ ddf42806 NKGraph : les types composes -- ils ne demandent pas quatre choses au m
 514b235b NKGraph : une ligne du recap disait DEUX etats a la fois -- et le controle renvoyait le defaut a l humain
 PS C:\Users\Mastermein\Desktop\Teuguis\Nkentseu>**
 
-## commits retenus :
+## 3-commits retenus :
 
- * **3331d7e8 Cours Conqueror : un chapitre pour CELUI QUI JOUE -- fusion, pouvoirs, artefacts a la souris -- renvois croises avec les chapitres d auteur, raccourci Pouvoir, PDF regenere :** 
-   * **oui il dit ce qu'il fait**
-   * **oui il dit pourquoi**
-   * **oui il se concente sur un sujet .Tout concerne la mise à jour du chapitre du joueur.**
+ ### Commit 1 : `1f46346d`
 
- 
+  * **Message de titre :** `docs(cartographie): correction de decompte dans l en-tete du rapport`
+  * **Examen avec `git show --no-patch 1f46346d` :** Le corps explicite le changement exact sur les compteurs.
+  * **Jugement :**
+    * **Dit-il ce qu'il fait ?** Oui, il indique qu'il corrige le décompte dans l'en-tête du rapport de cartographie.
+    * **Dit-il pourquoi ?** Oui, pour aligner le chiffre de l'en-tête avec les mesures réelles des fichiers recensés.
+    * **Porte-t-il sur un seul sujet ?** Oui, exclusivement sur la correction du chiffre d'en-tête.
 
- * **631ad2bd Cours : le controle Libelles hors cadre, pourquoi AddText tronquait des deux cotes, et le renvoi depuis le chapitre du joueur -- PDF regenere**
-   * **oui il dit ce qu'il fait**
-   * **oui il dit pourquoi**
-   * **oui il se concentre sur un seul sujet. Le commit reste centré sur le problème de cadrage des libellés.**
 
-* **7c3e84a0 Merge remote-tracking branch 'origin/main'** **(le plus faible que je trouve)**
-  * **non il ne dit pas ce qu'ill fait**
-  * **Non. Il ne donne aucune explication sur les modifications ou le contexte de la fusion.**
-  * **Un seul sujet : Non. Il regroupe plusieurs commits distants sans distinction.**
 
-## Réécriture du message le plus faible
+ ### Commit 2 : `3b79729b`
 
- * **Synchroniser les correctifs d'affichage de la branche principale :** **Intégration des dernières mises à jour distantes d'origin/main. Cette fusion récupère les correctifs récents afin d'éviter tout conflit sur les rendus visuels avant la suite du développement.** 
+  * **Message de titre :** `NKRenderer : Present() avant EndFrame() sur les 3 sites inverses, et le commentaire qui enseignait l inverse`
+  * **Examen avec `git show --no-patch 3b79729b` :** On voit la permutation des deux appels de fonction.
+  * **Jugement :**
+    * **Dit-il ce qu'il fait ?** Oui, il remet l'appel `Present()` avant `EndFrame()` sur trois sites d'appel et corrige le commentaire trompeur.
+    * **Dit-il pourquoi ?** Non. Le message décrit l'inversion d'ordre mais n'explique pas quelle anomalie ou bogue d'affichage (ex: gel d'image ou désynchronisation) cette inversion venait corriger.
+    * **Porte-t-il sur un seul sujet ?** Oui, l'ordre d'appel d'affichage dans le moteur de rendu.
+
+
+### Commit 3 : `7c3e84a0` (Le commit le plus faible)
+  * **Message de titre :** `Merge remote-tracking branch 'origin/main'`
+  * **Examen avec `git show --no-patch 7c3e84a0` :** Le corps est vide, seul le titre généré automatiquement par Git est présent.
+  * **Jugement :**
+    * **Dit-il ce qu'il fait ?** Non. Il indique uniquement une opération technique Git automatique, sans mentionner les fonctionnalités ou correctifs rapatriés.
+    * **Dit-il pourquoi ?** Non. Aucune raison contextuelle ou explication métier n'est fournie.
+    * **Porte-t-il sur un seul sujet ?** Non. Il regroupe aveuglément l'ensemble des modifications apportées par d'autres développeurs sur la branche distante.
+
+
+
+## 4- Réécriture du commit le plus faible (`7c3e84a0`)
+
+
+**Titre :**
+`NKCode : synchroniser la branche locale avec la version stable d'origin/main`
+
+**Corps du message :**
+`Intégration des derniers correctifs du runtime MinGW et de la distribution des DLLs depuis origin/main. Cette fusion élimine les échecs de dépendances manquantes constatés lors des tests locaux avant la publication.`
