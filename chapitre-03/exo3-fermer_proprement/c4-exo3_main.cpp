@@ -3,6 +3,7 @@
 #include "NKEvent/NkEventSystem.h"
 #include "NKEvent/NkWindowEvent.h"
 #include "NKEvent/NkKeyboardEvent.h"
+#include <iostream>
 
 using namespace nkentseu;
 
@@ -25,19 +26,28 @@ int nkmain(const NkEntryState& state) {
     }
 
     while (window.IsOpen()) {
+        bool shouldClose = false; // Drapeau unique pour demander la fermeture
+
         while (NkEvent* ev = NkEvents().PollEvent()) {
             
-            // 1. Touche Échap pressée -> demande de fermeture
+            // 1. Touche Échap pressée -> pose uniquement la demande de fermeture
             if (auto* kp = ev->As<NkKeyPressEvent>()) {
                 if (kp->GetKey() == NkKey::NK_ESCAPE) {
-                    window.Close();
+                    shouldClose = true;
                 }
             }
 
-            // 2. Événement de fermeture (Croix système, Alt+F4 ou suite à window.Close())
+            // 2. Événement de fermeture système (Croix ou Alt+F4)
             if (ev->Is<NkWindowCloseEvent>()) {
-                window.Close();
+                shouldClose = true;
             }
+        }
+
+        // UNIQUE ENDROIT DE FERMETURE :
+        // La fenêtre ne se ferme QUE si le drapeau est activé
+        if (shouldClose) {
+            std::cout << "[LOG] Fermeture unique declenchee pour la fenetre." << std::endl;
+            window.Close();
         }
     }
 
