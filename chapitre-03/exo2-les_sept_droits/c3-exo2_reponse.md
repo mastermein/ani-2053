@@ -106,7 +106,7 @@ int nkmain(const NkEntryState& state) {
 ## les sept droits
 
   **1. frame**
-    * `// 1. Test sans bordure
+   * `// 1. Test sans bordure
     {
         NkWindowConfig cfg = baseCfg;
         cfg.title = "Test 1: frame = false";
@@ -115,7 +115,7 @@ int nkmain(const NkEntryState& state) {
     }`
   
   **2. resizable**
-    `// 2. Test non redimensionnable
+  * `// 2. Test non redimensionnable
     {
         NkWindowConfig cfg = baseCfg;
         cfg.title = "Test 2: resizable = false";
@@ -124,7 +124,7 @@ int nkmain(const NkEntryState& state) {
     }`
   
   **3. minimizable**
-    `// 3. Test non minimisable
+  * `// 3. Test non minimisable
     {
         NkWindowConfig cfg = baseCfg;
         cfg.title = "Test 3: minimizable = false";
@@ -133,7 +133,7 @@ int nkmain(const NkEntryState& state) {
     }`
   
   **4. movable**
-    `// 4. Test non déplaçable
+  * `// 4. Test non déplaçable
     {
         NkWindowConfig cfg = baseCfg;
         cfg.title = "Test 4: movable = false";
@@ -142,7 +142,7 @@ int nkmain(const NkEntryState& state) {
     }`
   
   **5. closable**
-    `// 5. Test non fermable
+  * `// 5. Test non fermable
     {
         NkWindowConfig cfg = baseCfg;
         cfg.title = "Test 5: closable = false";
@@ -151,7 +151,7 @@ int nkmain(const NkEntryState& state) {
     }`
   
   **6. maximizable**
-    `// 6. Test non maximisable
+  * `// 6. Test non maximisable
     {
         NkWindowConfig cfg = baseCfg;
         cfg.title = "Test 6: maximizable = false";
@@ -160,7 +160,7 @@ int nkmain(const NkEntryState& state) {
     }`
   
   **7. canFullscreen**
-    `// 7. Test plein écran désactivé
+  * `// 7. Test plein écran désactivé
     {
         NkWindowConfig cfg = baseCfg;
         cfg.title = "Test 7: canFullscreen = false";
