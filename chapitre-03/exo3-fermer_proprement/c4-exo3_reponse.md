@@ -14,6 +14,7 @@
 #include "NKEvent/NkEventSystem.h"
 #include "NKEvent/NkWindowEvent.h"
 #include "NKEvent/NkKeyboardEvent.h"
+#include <iostream>
 
 using namespace nkentseu;
 
@@ -36,19 +37,28 @@ int nkmain(const NkEntryState& state) {
     }
 
     while (window.IsOpen()) {
+        bool shouldClose = false; // Drapeau unique pour demander la fermeture
+
         while (NkEvent* ev = NkEvents().PollEvent()) {
             
-            // 1. Touche Échap pressée -> demande de fermeture
+            // 1. Touche Échap pressée -> pose uniquement la demande de fermeture
             if (auto* kp = ev->As<NkKeyPressEvent>()) {
                 if (kp->GetKey() == NkKey::NK_ESCAPE) {
-                    window.Close();
+                    shouldClose = true;
                 }
             }
 
-            // 2. Événement de fermeture (Croix système, Alt+F4 ou suite à window.Close())
+            // 2. Événement de fermeture système (Croix ou Alt+F4)
             if (ev->Is<NkWindowCloseEvent>()) {
-                window.Close();
+                shouldClose = true;
             }
+        }
+
+        // UNIQUE ENDROIT DE FERMETURE :
+        // La fenêtre ne se ferme QUE si le drapeau est activé
+        if (shouldClose) {
+            std::cout << "[LOG] Fermeture unique declenchee pour la fenetre." << std::endl;
+            window.Close();
         }
     }
 
@@ -57,13 +67,20 @@ int nkmain(const NkEntryState& state) {
 
 ## principe
 
- * `if (kp->GetKey() == NkKey::NK_ESCAPE) {
-                    window.Close();
-                }` **la touche echap demande la fermeture**
+ Afin de respecter la consigne exigeant un seul et unique point de fermeture dans tout le programme :
 
- * `if (ev->Is<NkWindowCloseEvent>()) {
-                window.Close();
-            }` **Événement de fermeture (Croix système, Alt+F4) declenchent la fermeture**
+1. **Centralisation par un bool (`shouldClose`)** :
+   - L'appui sur la touche **Échap** (`NkKeyPressEvent`) met `shouldClose = true`.
+   - L'événement de fermeture système **Croix / Alt+F4** (`NkWindowCloseEvent`) met également `shouldClose = true`.
+
+2. **Point de fermeture unique** :
+   La méthode `window.Close()` n'est appelée qu'à **un seul endroit dans tout le fichier**, à la fin du traitement des événements lorsque `shouldClose == true`.
 
 
+
+## Trace d'exécution (Preuve de passage)
+
+Chaque type d'action emprunte exactement le même chemin et affiche le même log dans la console :
+
+`[LOG] Fermeture unique declenchee pour la fenetre.`
  
