@@ -167,4 +167,16 @@ int nkmain(const NkEntryState& state) {
         cfg.canFullscreen = false;
         RunTestWindow(cfg, "canFullscreen = false");
     }`
-     
+
+
+## observations 
+
+| Droit | Effet attendu | Effet observé |
+| :--- | :--- | :--- |
+| `frame = false` | Fenêtre sans aucune bordure ni barre de titre. | La fenêtre s'affiche complètement sans bordure ni barre de titre. |
+| `resizable = false` | Impossibilité de redimensionner la fenêtre à la souris. | Les bordures ne sont fixes et permettent toujours l'étirement. |
+| `minimizable = false` | Bouton de réduction (`-`) désactivé ou absent. | Le bouton de réduction apparait toujours dans la barre de titre. |
+| `movable = false` | Impossibilité de déplacer la fenêtre à l'écran. | La fenêtre reste déplaçable. |
+| `closable = false` | Bouton de fermeture (`X`) désactivé. | Le bouton de fermeture est toujours dans la barre de titre. |
+| `maximizable = false` | Bouton d'agrandissement (`□`) désactivé. | Le bouton d'agrandissement est toujours normal. |
+| `canFullscreen = false` | Raccourcis ou modes plein écran désactivés. | La bascule en plein écran est toujours autorisée. |
