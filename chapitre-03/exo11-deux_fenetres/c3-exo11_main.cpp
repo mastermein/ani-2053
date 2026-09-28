@@ -36,10 +36,10 @@ int nkmain(const NkEntryState& state) {
             if (ev->Is<NkWindowCloseEvent>()) {
                 if (ev->GetWindowId() == winA.GetId()) {
                     winA.Close();
-                    std::cout << "\n[Fermeture] Vue Gauche fermee.";
+                    std::cout << "\n Vue Gauche fermee.";
                 } else if (ev->GetWindowId() == winB.GetId()) {
                     winB.Close();
-                    std::cout << "\n[Fermeture] Vue Droite fermee.";
+                    std::cout << "\n Vue Droite fermee.";
                 }
             }
             // 2. Touche ÉCHAP pour fermer les deux fenêtres d'un coup
