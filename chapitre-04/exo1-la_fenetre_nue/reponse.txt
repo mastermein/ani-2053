@@ -1,1 +1,11 @@
 
+-Ce que la coquille fait a ma place :
+
+    *creer une fentre deja configuree par defaut
+    * choisir l'api utlisee (DirectX 11)
+    * creer un NKRenderWindow
+
+-Ce qui se passe si je configure dans OnInit :la fenêtre est déjà créée, et rien ne change.seul la couleur de fond de la fnêtre paramétrée est prise en compte. La taille et le titre fourni ne sont pas appliqués à la fenêtre
+
+-Ce qui se passe sans NKMain.h :  tout compile mais l'édition de liens échoue. on se retrouve donc avec le message "undefined        ║
+║ reference to `WinMain'"
