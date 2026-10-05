@@ -1,7 +1,8 @@
 #include <iostream>
 #include <cmath> // Pour std::cos, std::floor et std::ceil
 
-int main() {
+int main() 
+{
 
     // Valeur de Pi imposée par la règle
     const double pi = 3.141592653589793;
