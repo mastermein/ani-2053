@@ -7,17 +7,20 @@
 using namespace nkentseu;
 using namespace nkentseu::threading;
 
-void TacheCourte(void*) {
+void TacheCourte(void*) 
+{
     volatile long long somme = 0;
     for (int i = 0; i < 1000; ++i) somme += i;
 }
 
-void TacheLongue(void*) {
+void TacheLongue(void*) 
+{
     volatile long long somme = 0;
     for (int i = 0; i < 100000; ++i) somme += i;
 }
 
-int main() {
+int main() 
+{
     NkThreadPool pool;
     std::cout << "Ouvriers : " << pool.GetNumWorkers() << std::endl;
 
@@ -26,29 +29,35 @@ int main() {
     const int nbTaches = 200;
 
     // Échauffement de la réserve pour éviter les retards de démarrage
-    for (int i = 0; i < nbTaches; ++i) {
+    for (int i = 0; i < nbTaches; ++i) 
+    {
         pool.Enqueue([&](auto&&...) { TacheCourte(q); });
     }
     pool.Join();
 
     // --- Fonctions utilitaires pour éviter la répétition du code ---
-    auto mesurerReserve = [&](auto tache) {
+    auto mesurerReserve = [&](auto tache) 
+    {
         chrono.Reset();
-        for (int i = 0; i < nbTaches; ++i) {
+        for (int i = 0; i < nbTaches; ++i) 
+        {
             pool.Enqueue([&](auto&&...) { tache(q); });
         }
         pool.Join();
         return static_cast<long long>(chrono.Elapsed().ToMilliseconds());
     };
 
-    auto mesurerFils = [&](auto tache) {
+    auto mesurerFils = [&](auto tache) 
+    {
         chrono.Reset();
         std::vector<NkThread*> fils;
         fils.reserve(nbTaches);
-        for (int i = 0; i < nbTaches; ++i) {
+        for (int i = 0; i < nbTaches; ++i) 
+        {
             fils.push_back(new NkThread([=](void*) { tache(nullptr); }));
         }
-        for (auto* fil : fils) {
+        for (auto* fil : fils) 
+        {
             fil->Join();
             delete fil;
         }
