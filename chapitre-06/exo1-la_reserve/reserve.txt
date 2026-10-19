@@ -1,0 +1,4 @@
+Ouvriers : 4
+R├®serve : 0ms, 0ms, 0ms
+Fils : 20ms, 27ms, 18ms
+T├óche longue : 17ms, 35ms
