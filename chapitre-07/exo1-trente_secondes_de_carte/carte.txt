@@ -1,7 +1,7 @@
 Module : NKImage
 
-D'après le projet :
+D'après le projet : je pensais que ce module pouvait juste formats , charger - stocker - manipuler des textures (compresser , exporter , fabriquer) sans emettre aucun son.
 
-Après l'en-tête :
+Après l'en-tête : le fichier C:\Users\Mastermein\Desktop\Teuguis\Game\Canvas\include\NKImage\NKImage.h nous apprend que NKImage sait decoder une multitude de formats d'images (PNG, JPEG, BMP, TGA, HDR, EXR, PPM, QOI, GIF, ICO, WEBP) et manipuler du vectoriel (SVG)
 
-Mes erreurs :
+Mes erreurs : les dependances ne laissaient pas deviner la liste des formats supportes 
