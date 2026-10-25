@@ -1,1 +1,7 @@
+ce qu'il possède: les positions avec NkVec2f mPosition{} , les rotatons avec float32 mRotation{}, l'echelle avec NkVec2f mScale{} et les origin avec NkVec2f mOrigin{0.f, 0.f}
 
+qui l'appelle: il est appeler dans C:\Users\Mastermein\Desktop\Canvas\include\NKCanvas\Renderer\Shapes\NkShape.h
+
+ce qu'il promet: manipulation de positions , de rotations , de l'echelle et de l'origin d'objets.
+
+Ce que je n'ai pas lu :  les lignes de commentaires et toutes les methodes contenus dans public:
