@@ -1,6 +1,11 @@
-ce qu'il possède: les positions avec NkVec2f mPosition{} , les rotatons avec float32 mRotation{}, l'echelle avec NkVec2f mScale{} et les origin avec NkVec2f mOrigin{0.f, 0.f}
+ce qu'il possède: les positions avec NkVec2f mPosition{} , les rotatons avec float32 mRotation{}, l'echelle avec NkVec2f mScale{} et les origin avec NkVec2f mOrigin{0.f, 0.f}. il detient  egalement en cache la transformation et son inverse
 
-qui l'appelle: il est appeler dans C:\Users\Mastermein\Desktop\Canvas\include\NKCanvas\Renderer\Shapes\NkShape.h
+qui l'appelle: il est appeler dans : 
+-Canvas\include\NKCanvas\Renderer\Shapes\NkShape.h (usage)
+-Canvas/include/NKCanvas/Renderer/Resources/NkSprite.h (usage)
+-Canvas/include/NKCanvas/Renderer/Core/NkDrawable.h (mention)
+-Canvas/include/NKCanvas/Renderer/Shapes/NkRectangleShape.h (mention)
+-Canvas/include/NKCanvas/Renderer/Shapes/NkLineShape.h (mention)
 
 ce qu'il promet: manipulation de positions , de rotations , de l'echelle et de l'origin d'objets.
 
