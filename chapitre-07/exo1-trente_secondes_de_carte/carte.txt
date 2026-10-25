@@ -1,1 +1,7 @@
+Module : NKImage
 
+D'après le projet :
+
+Après l'en-tête :
+
+Mes erreurs :
