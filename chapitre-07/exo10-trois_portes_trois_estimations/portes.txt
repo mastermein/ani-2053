@@ -1,1 +1,71 @@
+Module : NKMemory
 
+Après le projet : 
+-Ce que j'ai lu :
+KIT_MODULES = [
+    "NKAudio",
+    "NKCanvas",
+    "NKMedia",
+    "NKGui",
+    "NKImage",
+    "NKWindow",
+    "NKNetwork",
+    "NKStream",
+    "NKEvent",
+    "NKFont",
+    "NKFileSystem",
+    "NKTime",
+    "NKLogger",
+    "NKMath",
+    "NKThreading",
+    "NKContainers",
+    "NKMemory",
+    "NKCore",
+    "NKGlad",
+    "NKPlatform",
+]
+
+-Mon estimation : 
+*Aux vues des dependances de ce module , j'imagine qu'il sert a gerer de la memoire d'ou son nom NKMemory (allocation dynamique , pointeurs , gestion des tampons memoires)
+
+Après un programme :
+-Ce que j'ai lu :
+// Exemple 1 : Logging personnalisé pour les fuites mémoire
+    void MyLogCallback(const nk_char* message) {
+        // Rediriger vers un fichier de log dédié
+        FILE* f = fopen("memory_leaks.log", "a");
+        if (f) {
+            fprintf(f, "%s\n", message);
+            fclose(f);
+        }
+        // Ou vers un système de logging externe
+        ExternalLogger::Warn("Memory", message);
+    }
+
+    void InitLogging() {
+        NK_MEMORY_SYSTEM.SetLogCallback(MyLogCallback);
+    }
+
+-Mon estimation :
+*le module fournit un systeme de gestion de memoire unifie et securise pour le moteur. Il integre nativement du suivi (tracking) pour la detection de fuites, du profiling et une gestion centralisee du Garbage Collection, tout en restant simple a integrer via des macros.
+
+Après les en-têtes :
+-Ce que j'ai lu : 
+#include "NKMemory/NkMemoryApi.h" // NKENTSEU_MEMORY_API
+#include "NKMemory/NkAllocator.h" // NkAllocator, NK_MEMORY_DEFAULT_ALIGNMENT
+#include "NKMemory/NkTracker.h"      // NkMemoryTracker pour leak detection
+#include "NKMemory/NkProfiler.h"  // NkMemoryProfiler pour runtime hooks
+#include "NKMemory/NkGc.h"          // NkGarbageCollector pour mark-and-sweep
+#include "NKMemory/NkHash.h"      // NkPointerHashMap pour index O(1)
+#include "NKCore/NkTypes.h"          // nk_size, nk_uint64, nk_char, etc.
+#include "NKCore/NkAtomic.h"      // NkSpinLock pour synchronisation
+#include "NKCore/NkTraits.h"      // traits::NkForward pour perfect forwarding
+
+-Mon estimation :
+*on dirait que le systeme possede une securite multi-thread grace a l'utilisation de verrous (NkSpinLock)
+*Des fonctions de destruction pour les objets uniques et les tableaux (DestroyObject, DestroyArray).
+
+puis L'écart :
+*porte1 : bibliothèque de bas niveau pour allouer de la mémoire.
+*porte2 : système d'administration global doté d'une gestion multi-garbage.
+*porte3 : un gestionnaire centralise capable de piloter a la fois des allocations manuelles de type C/C++ et des environnements geres par Garbage Collector multiples.
