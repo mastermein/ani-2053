@@ -7,13 +7,13 @@ Les endroits :
 Les surprises :
 -le code couleur utilise dans NKCanvasApp.h pour effacer l'ecran n'existe pas dans NKColor.h
 -le fichier NKColor.h donne la definition de la couleur par defaut ainsi que celle des autre couleurs.
-
+-la definitions de couleurs specifiques a NkColor2D est introuvable.
 
 Les questions ouvertes :
 -d'ou provient la couleur par defaut de l'ecran utilisee dans NKCanvasApp ?
 
 
 puis Les mensonges : 
--la couleur par defaut d'une fenetre NKCanvasApp est tiree de NKColor.h
+-ou sont defini les couleurs utilisees pour le nettoyage de l'ecran dans la ligne NkColor2D clearColor = NkColor2D{18, 18, 24, 255}; de NKCanvasApp.h ?
 
-Après Question : aucu
+Après Question : aucun
