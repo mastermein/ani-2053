@@ -1,7 +1,9 @@
 Les sauts :
+1-NKRenderTexture.h : void Clear(const NkColor2D &color = NkColor2D::Black) override;
+2-NKRenderTarget: virtual void Clear(const NkColor2D &color = NkColor2D::Black) = 0;
 
-Arrêt :
+Arrêt : virtual void Clear(const NkColor2D &color = NkColor2D::Black) = 0;
 
-Pourquoi là :
+Pourquoi là : je m'arrete au deuxieme saut car a l'interieur on retrouve une fonction virtuelle pure
 
-Ce que je sais maintenant :
+Ce que je sais maintenant : la methode clear prend en argument la couleur choisie en arggument pour dessiner a l'ecran sans argument. cette methode qui nettoi l'ecran applique en fait une texture dont la couleur des pixels est celle mise en argument
