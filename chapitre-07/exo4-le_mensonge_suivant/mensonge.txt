@@ -1,4 +1,6 @@
-Le commentaire :
+Le commentaire : dans Canvas/include/NKImage/Core/NkImage.h
+1079 : « deflate minimal
+     *  (compression sans compression = stored blocks)
 
 Le code :
 
