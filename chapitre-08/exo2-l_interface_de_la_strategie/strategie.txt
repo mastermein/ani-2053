@@ -1,1 +1,20 @@
+Virtuelles pures : je compte 31 methodes virtuelles pures qui commencent par ("virtual") et qui se terminent par ("= 0;") dans la rechercher avec ("Ctrl+h")
 
+Dorsaux :
+-DirectX11
+-DirectX12
+-Metal
+-OpenGL
+-Software
+-Vulkan
+
+Ce que chacun écrit :
+chaque dorsal erite de la classe NkBatchRenderer2D
+-DirectX11 : 09 methodes
+-DirectX12 : 09 methodes
+-Metal : 09 methodes
+-OpenGL : 10 methodes
+-Software : 10 methodes
+-Vulkan : 15 methodes
+
+Le coût : d'apres ce qui precede , ajouter une nouvelle dorsal signifie de redefinir minimum 09 methodes. 
