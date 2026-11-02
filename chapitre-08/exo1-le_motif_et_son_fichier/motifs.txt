@@ -1,1 +1,33 @@
+Stratégie :
+C:/Users/Mastermein/Desktop/Game/Canvas/include/NKAudio/NkAudio.h:457
+virtual void Reset() = 0;
 
+Fabrique :
+C:/Users/Mastermein/Desktop/Game/Canvas/include/NKAudio/NkAudio.h:1377
+class NKENTSEU_AUDIO_API AudioBackendFactory {
+
+Façade :
+C:/Users/Mastermein/Desktop/Game/Canvas/include/NKAudio/NkAudio.h:1239
+void ClearEffects(AudioHandle handle);
+
+Patron de méthode :
+C:/Users/Mastermein/Desktop/Game/Canvas/include/NKCanvas/App/NkCanvasApp.h:262
+virtual void OnRender(NkRenderWindow &target) {
+
+Observateur :
+C:/Users/Mastermein/Desktop/Game/Canvas/include/NKCanvas/Backend/OpenGL/NkOpenGLComputeContext.h:45
+void Dispatch(uint32 gx, uint32 gy = 1, uint32 gz = 1) override;
+
+Singleton :
+C:/Users/Mastermein/Desktop/Game/Canvas/include/Core/NkFontParser.h:31
+inline nkft_uint8 NkReadU8(const nkft_uint8 *p)
+
+Adaptateur :
+C:/Users/Mastermein/Desktop/Game/Canvas/include/NKCanvas/Renderer/Targets/NkRenderWindow.h:49
+class NkRenderWindow : public NkRenderTarget {
+
+Composite :
+C:/Users/Mastermein/Desktop/Game/Canvas/include/NKCanvas/UI/NkUICanvasBackend.h:46
+class NkUICanvasBackend {
+
+Commande :
