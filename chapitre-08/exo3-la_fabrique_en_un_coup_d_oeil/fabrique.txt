@@ -1,1 +1,29 @@
+Recherche :
+-commande : grep -rn "NkOpenGLRenderer2D" include
+-retour :
+PS C:\Users\Mastermein\Desktop\Game\Canvas> grep -rn "NkOpenGLRenderer2D" include
+include/NKCanvas/Backend/OpenGL/NkOpenGLRenderer2D.h:3:// NkOpenGLRenderer2D.h — OpenGL 2D renderer backend
+include/NKCanvas/Backend/OpenGL/NkOpenGLRenderer2D.h:13:                class NkOpenGLRenderer2D final : public NkBatchRenderer2D {
+include/NKCanvas/Backend/OpenGL/NkOpenGLRenderer2D.h:15:                                NkOpenGLRenderer2D() = default;
+include/NKCanvas/Backend/OpenGL/NkOpenGLRenderer2D.h:17:                                ~NkOpenGLRenderer2D() override {
+include/NKCanvas/Renderer/Core/NkIRenderer2D.h:15://   Backends/OpenGL/NkOpenGLRenderer2D
+include/NKCanvas/Renderer/Core/NkRenderer2D.h:19://   NkSoftwareRenderer2D / NkOpenGLRenderer2D / NkVulkanRenderer2D / NkDX11Renderer2D / NkDX12Renderer2D
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:22:// EXEMPLE D'ENREGISTREMENT (OpenGL, en fin de NkOpenGLRenderer2D::Initialize)
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:24://       &NkOpenGLRenderer2D::CreateGLTexture,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:25://       &NkOpenGLRenderer2D::UpdateGLTexture,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:26://       &NkOpenGLRenderer2D::DeleteGLTexture,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:27://       &NkOpenGLRenderer2D::SetGLTextureFilter,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:28://       &NkOpenGLRenderer2D::SetGLTextureWrap,
+include/NKGui/Core/NkGuiDrawListRaster.h:35://      OpenGL (`NkOpenGLRenderer2D::SetBlendMode`) : Screen ONE /
+PS C:\Users\Mastermein\Desktop\Game\Canvas>
 
+Hors de son dossier :include/NKCanvas/Renderer/Resources/NkTextureBackend.h:22:// EXEMPLE D'ENREGISTREMENT (OpenGL, en fin de NkOpenGLRenderer2D::Initialize)
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:24://       &NkOpenGLRenderer2D::CreateGLTexture,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:25://       &NkOpenGLRenderer2D::UpdateGLTexture,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:26://       &NkOpenGLRenderer2D::DeleteGLTexture,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:27://       &NkOpenGLRenderer2D::SetGLTextureFilter,
+include/NKCanvas/Renderer/Resources/NkTextureBackend.h:28://       &NkOpenGLRenderer2D::SetGLTextureWrap,
+include/NKGui/Core/NkGuiDrawListRaster.h:35://      OpenGL (`NkOpenGLRenderer2D::SetBlendMode`) : Screen ONE /
+
+
+Conclusion : Le nom de la classe concrete (NkOpenGLRenderer2D) apparait en dehors de son dossier de base, donc La fabrique ne parvient pas totalement a isoler le choix des classes concretes bien qu'elle centralise la creation du rendu.
