@@ -52,7 +52,7 @@ int main()
     {
         std::set<std::string> visited;
         std::queue<std::string> q;
-
+        
         q.push(start_file);
         visited.insert(start_file);
 
@@ -69,7 +69,8 @@ int main()
             q.pop();
 
             // Parcourir tous les fichiers qui incluent 'curr'
-            if (inverse_graph.count(curr)) {
+            if (inverse_graph.count(curr)) 
+            {
                 for (const auto& parent : inverse_graph[curr]) 
                 {
                     if (!visited.count(parent)) 
