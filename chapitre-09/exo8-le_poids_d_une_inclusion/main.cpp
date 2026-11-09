@@ -88,16 +88,16 @@ int main()
         return cpp_count;
     };
 
-    // 2. Lecture des questions
+   // 2. Lecture des questions et affichage direct au format "nom_du_fichier score"
     int q_count;
     if (!(std::cin >> q_count)) return 0;
 
-    std::vector<int> answers(q_count);
     for (int i = 0; i < q_count; ++i) 
     {
         std::string target;
         std::cin >> target;
-        answers[i] = get_recompiled_cpp_count(target);
+        int ans = get_recompiled_cpp_count(target);
+        std::cout << target << " " << ans << "\n";
     }
 
     // 3. Recherche du PLUS_LOURD parmi les .h
@@ -117,12 +117,7 @@ int main()
         }
     }
 
-    // 4. Affichage du résultat au format strict
-    for (int ans : answers) 
-    {
-        std::cout << ans << "\n";
-    }
-
+    // 4. Affichage final de PLUS_LOURD
     std::cout << "PLUS_LOURD " << heaviest_h;
     if (max_impact != -1) 
     {
@@ -131,4 +126,3 @@ int main()
     std::cout << "\n";
 
     return 0;
-}
