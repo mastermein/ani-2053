@@ -52,7 +52,7 @@ int main()
     {
         std::set<std::string> visited;
         std::queue<std::string> q;
-        
+
         q.push(start_file);
         visited.insert(start_file);
 
@@ -126,3 +126,4 @@ int main()
     std::cout << "\n";
 
     return 0;
+    }
