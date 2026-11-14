@@ -1,1 +1,9 @@
+Ce que possède chaque fichier :
+- NkRefView.h gere la camera 2D, les conversions entre pixels et monde, et le zoom.
+- NkRefBoard.h gere le modele de donnees et l'ordre de profondeur des images.
+- NkRefFile.h gere la sauvegarde et le chargement du format binaire de la planche.
+- main.cpp fait la liaison entre la fenetre, les evenements et le rendu graphique.
 
+La part des fichiers purs : Les fichiers purs totalisent 681 lignes sur un total de 2658 lignes, soit environ 25,62 % du code.
+
+Les deux fichiers que je garderais : Les deux fichiers a garder sont NkRefView.h et NkRefBoard.h car ils concentrent toute la logique essentielle de l'outil sans dependre de l'interface et de la fenetre.
