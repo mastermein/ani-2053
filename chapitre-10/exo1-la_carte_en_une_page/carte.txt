@@ -1,1 +1,10 @@
+-fichier :main.cpp: lignes : 2049 , includes : #include "NKWindow/NKWindow.h" #include "NKWindow/NKMain.h" #include "NKEvent/NkEvent.h" #include "NKEvent/NkWindowEvent.h" #include "NKEvent/NkMouseEvent.h" #include "NKEvent/NkKeyboardEvent.h" #include "NKEvent/NkDropEvent.h" #include "NKLogger/NkLog.h" #include "NKTime/NkTime.h" #include "NKCanvas/Renderer/Targets/NkRenderWindow.h" #include "NKCanvas/Core/NkContextDesc.h" #include "NKCanvas/Core/NkGraphicsApi.h" #include "NKCanvas/Renderer/Resources/NkTexture.h" #include "NKCanvas/Renderer/Resources/NkSprite.h" // contient aussi NkText #include "NKCanvas/Renderer/Resources/NkFont.h" #include "NKFileSystem/NkDirectory.h"
+#include "NKFileSystem/NkFile.h" #include "NKImage/NKImage.h"
 
+-fichier :NkRefBoard.h: lignes : 338 , includes : #include "NKMath/NKMath.h" #include "NKContainers/Sequential/NkVector.h" #include "NKContainers/String/NkString.h"
+
+-fichier :NkRefFile.h: lignes : 213 , includes : #include "NKContainers/Sequential/NkVector.h" #include "NkRef/NkRefBoard.h" #include "NkRef/NkRefView.h"
+
+-fichier :NkRefView.h: lignes : 74 , includes : #include "NKMath/NKMath.h"
+
+-Commit: ce082af40
