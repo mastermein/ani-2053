@@ -49,10 +49,10 @@ int main()
         nouvellePlace++;
         restent++;
 
-
+        
         bool idChanged = (images[i].id != 0);
         bool selectedChanged = (images[i].selectionne != 0);
-        bool pathChanged = (!images[i].chemin.empty());
+        bool pathChanged = (!images[i].chemin.empty() && images[i].chemin != "-");
 
         int countChanges = 0;
         if (idChanged) 
@@ -70,11 +70,12 @@ int main()
 
         totalChanges += countChanges;
 
-        std::cout << "ITEM " << nouvellePlace << " " << nouvellePlace;
+        std::cout << "ITEM " << (i + 1) << " " << nouvellePlace;
         if (countChanges == 0) 
         {
             std::cout << " AUCUN";
-        } else 
+        } 
+        else 
         {
             if (idChanged) 
             {
