@@ -41,15 +41,17 @@ int main()
 
     for (int i = 0; i < N; ++i) 
     {
+        int k = i + 1; 
+
         if (images[i].octets == 0) 
         {
+            std::cout << "ITEM " << k << " SAUTE\n";
             continue;
         }
 
         nouvellePlace++;
         restent++;
 
-        
         bool idChanged = (images[i].id != 0);
         bool selectedChanged = (images[i].selectionne != 0);
         bool pathChanged = (!images[i].chemin.empty() && images[i].chemin != "-");
@@ -70,7 +72,7 @@ int main()
 
         totalChanges += countChanges;
 
-        std::cout << "ITEM " << (i + 1) << " " << nouvellePlace;
+        std::cout << "ITEM " << k << " " << nouvellePlace;
         if (countChanges == 0) 
         {
             std::cout << " AUCUN";
