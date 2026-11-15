@@ -2,9 +2,7 @@
 #include <vector>
 #include <string>
 
-
-struct ImageRecord 
-{
+struct ImageRecord {
     long long id;
     double x, y;
     double echelle, rotation, opacite;
@@ -15,8 +13,7 @@ struct ImageRecord
     long long octets;
 };
 
-int main() 
-{
+int main() {
     std::ios::sync_with_stdio(false);
     std::cin.tie(nullptr);
 
@@ -24,8 +21,7 @@ int main()
     if (!(std::cin >> N)) return 0;
 
     std::vector<ImageRecord> images(N);
-    for (int i = 0; i < N; ++i) 
-    {
+    for (int i = 0; i < N; ++i) {
         std::cin >> images[i].id >> images[i].x >> images[i].y
             >> images[i].echelle >> images[i].rotation >> images[i].opacite
             >> images[i].miroirX >> images[i].miroirY
@@ -37,16 +33,14 @@ int main()
     int restent = 0;
     int totalChanges = 0;
 
-    for (int i = 0; i < N; ++i) 
-    {
-
-        if (images[i].octets == 0) 
-        {
+    for (int i = 0; i < N; ++i) {
+        if (images[i].octets == 0) {
             continue;
         }
 
         nouvellePlace++;
         restent++;
+
 
         bool idChanged = (images[i].id != 0);
         bool selectedChanged = (images[i].selectionne != 0);
@@ -60,11 +54,9 @@ int main()
         totalChanges += countChanges;
 
         std::cout << "ITEM " << nouvellePlace << " " << nouvellePlace;
-        if (countChanges == 0) 
-        {
+        if (countChanges == 0) {
             std::cout << " AUCUN";
-        } else 
-        {
+        } else {
             if (idChanged) std::cout << " id";
             if (selectedChanged) std::cout << " selected";
             if (pathChanged) std::cout << " sourcePath";
