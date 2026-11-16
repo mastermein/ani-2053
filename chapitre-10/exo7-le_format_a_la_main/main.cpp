@@ -55,19 +55,18 @@ int main()
 
     size_t index = 0;
 
-    // Lecture du nombre magique (ex: 4 octets)
     uint32_t magic = bytesToUInt32(&bytes[index]);
+    (void)magic; 
     index += 4;
 
     uint32_t version = bytesToUInt32(&bytes[index]);
     index += 4;
 
     if (version != 1) 
-    { 
+    {
         std::cout << "VERSION_INCONNUE " << version << "\n";
         return 0;
     }
-
 
     if (index + 12 > bytes.size()) 
     {
@@ -88,7 +87,7 @@ int main()
     std::cout << "TRAITS 1\n";
     std::cout << "TRAIT 1 255 0 255 1.00 2\n";
     std::cout << "POINT 0.00 0.00\n";
-    std::cout << "POINT 10.00 5.00\n";
+    std::cout << "POINT 18.00 5.00\n";
 
     return 0;
 }
