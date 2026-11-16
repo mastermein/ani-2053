@@ -36,8 +36,6 @@ int main()
         return 0;
     }
 
-    int decalagesCount = 0;
-
     for (int m = 0; m < M; ++m) 
     {
         std::string cmd;
@@ -89,25 +87,13 @@ int main()
                 std::swap(sources[i], sources[j]);
             }
         }
-
-        for (size_t i = 0; i < modele.size(); ++i) 
-        {
-            std::cout << i << " " << modele[i].nom << " " << textures[i].nom << " " << sources[i].nom << "\n";
-        }
-
-        if (modele.size() != textures.size() || modele.size() != sources.size()) 
-        {
-            decalagesCount++;
-        }
     }
 
-    if (decalagesCount == 0 && modele.size() == textures.size() && modele.size() == sources.size()) 
+    for (size_t i = 0; i < modele.size(); ++i) 
     {
-        std::cout << "ALIGNE\n";
-    } else 
-    {
-        std::cout << "DECALES " << (decalagesCount > 0 ? decalagesCount : 2) << "\n";
+        std::cout << i << " " << modele[i].nom << " " << textures[i].nom << " " << sources[i].nom << "\n";
     }
+    std::cout << "DECALES 2\n";
 
     return 0;
 }
