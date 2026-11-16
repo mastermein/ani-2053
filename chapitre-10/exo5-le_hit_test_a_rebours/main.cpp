@@ -23,7 +23,8 @@ int main()
     }
 
     std::vector<ImageItem> images(N);
-    for (int i = 0; i < N; ++i) {
+    for (int i = 0; i < N; ++i) 
+    {
         std::cin >> images[i].nom >> images[i].x >> images[i].y
             >> images[i].largeur >> images[i].hauteur >> images[i].echelle;
     }
@@ -44,8 +45,9 @@ int main()
         std::string resultatRebours = "AUCUN";
         std::string resultatEndroit = "AUCUN";
 
-        // 1. Recherche à rebours (de la fin vers le début)
-        for (int i = N - 1; i >= 0; --i) {
+
+        for (int i = N - 1; i >= 0; --i) 
+        {
             double halfW = (images[i].largeur * images[i].echelle) / 2.0;
             double halfH = (images[i].hauteur * images[i].echelle) / 2.0;
             double minX = images[i].x - halfW;
@@ -60,7 +62,7 @@ int main()
             }
         }
 
-        // 2. Recherche à l'endroit (du début vers la fin)
+
         for (int i = 0; i < N; ++i) 
         {
             double halfW = (images[i].largeur * images[i].echelle) / 2.0;
@@ -82,7 +84,7 @@ int main()
             erreursCount++;
         }
 
-        std::cout << "CLIC " << resultatRebours << " " << resultatEndroit << "\n";
+        std::cout << "CLIC " << (q + 1) << " " << resultatRebours << " " << resultatEndroit << "\n";
     }
 
     std::cout << "ERREURS " << erreursCount << "\n";
